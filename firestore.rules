@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Municipal employee leave tracking app - allow read and write
+    match /employees/{employeeId} {
+      allow read, write: if true;
+    }
+    match /leaveRecords/{recordId} {
+      allow read, write: if true;
+    }
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "Employee": {
+      "collection": "employees",
+      "fields": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "position": { "type": "string" },
+        "department": { "type": "string" },
+        "personnelType": { "type": "string" },
+        "phone": { "type": "string" },
+        "avatar": { "type": "string", "optional": true },
+        "photoUrl": { "type": "string", "optional": true },
+        "leaveQuotas": {
+          "type": "map",
+          "fields": {
+            "vacation": { "type": "number" },
+            "sick": { "type": "number" },
+            "personal": { "type": "number" }
+          }
+        }
+      }
+    },
+    "LeaveRecord": {
+      "collection": "leaveRecords",
+      "fields": {
+        "id": { "type": "string" },
+        "employeeId": { "type": "string" },
+        "employeeName": { "type": "string" },
+        "department": { "type": "string" },
+        "leaveType": { "type": "string" },
+        "startDate": { "type": "string" },
+        "endDate": { "type": "string" },
+        "totalDays": { "type": "number" },
+        "reason": { "type": "string" },
+        "status": { "type": "string" },
+        "approvedBy": { "type": "string", "optional": true },
+        "createdAt": { "type": "string" },
+        "attachmentUrl": { "type": "string", "optional": true },
+        "attachmentName": { "type": "string", "optional": true }
+      }
+    }
+  }
+}

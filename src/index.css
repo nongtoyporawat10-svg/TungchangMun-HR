@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-sarabun: 'TH Sarabun IT9', 'TH Sarabun IT๙', 'THSarabunIT9', 'TH Sarabun New', 'THSarabunNew', 'TH Sarabun PSK', 'THSarabunPSK', 'Sarabun', serif, sans-serif;
+}
+
+:root {
+  font-family: 'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body, button, input, select, textarea {
+  font-family: 'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* TH Sarabun IT9 Document & Report Styling */
+.font-sarabun,
+.font-sarabun-it9,
+.sarabun-form,
+.sarabun-report,
+.thai-gov-doc,
+#printable-official-leave-form,
+.printable-report-area {
+  font-family: 'TH Sarabun IT9', 'TH Sarabun IT๙', 'THSarabunIT9', 'TH Sarabun New', 'THSarabunNew', 'TH Sarabun PSK', 'THSarabunPSK', 'Sarabun', serif, sans-serif !important;
+}
+
+/* Specific styling for official Thai Government leave form and report tables */
+.thai-gov-doc {
+  line-height: 1.7;
+  font-size: 16px;
+  color: #000000;
+}
+
+/* Authentic Thai Distributed Typography (การกระจายแบบไทย / Thai Justified Distribution) */
+.thai-distributed,
+.thai-justify {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-text-justify: distribute;
+  text-align-last: left;
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+.thai-distributed-full {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-text-justify: distribute;
+  text-align-last: justify;
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+.thai-doc-paragraph {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-text-justify: distribute;
+  line-height: 1.85;
+  text-indent: 2.5em;
+  word-break: break-word;
+}
+
+.thai-gov-doc h1,
+.thai-gov-doc h2,
+.thai-gov-doc h3,
+.thai-gov-doc h4 {
+  font-family: 'TH Sarabun IT9', 'TH Sarabun IT๙', 'THSarabunIT9', 'TH Sarabun New', 'THSarabunNew', 'TH Sarabun PSK', 'THSarabunPSK', 'Sarabun', serif, sans-serif !important;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 15pt !important;
+    font-family: 'TH Sarabun IT9', 'TH Sarabun IT๙', 'THSarabunIT9', 'TH Sarabun New', 'THSarabunNew', 'TH Sarabun PSK', 'THSarabunPSK', 'Sarabun', serif, sans-serif !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 12mm 15mm;
+  }
+  #printable-official-leave-form,
+  .printable-report-area {
+    font-family: 'TH Sarabun IT9', 'TH Sarabun IT๙', 'THSarabunIT9', 'TH Sarabun New', 'THSarabunNew', 'TH Sarabun PSK', 'THSarabunPSK', 'Sarabun', serif, sans-serif !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
